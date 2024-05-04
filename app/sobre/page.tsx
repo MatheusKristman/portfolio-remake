@@ -6,15 +6,13 @@ import { Hobbies } from "@/components/about/hobbies";
 
 function AboutPage() {
   return (
-    <>
-      <div className="w-full mt-[100px] mb-[200px]">
-        <AboutMe />
-        <Illustration />
-        <Skills />
-        <Details />
-        <Hobbies />
-      </div>
-    </>
+    <div className="w-full mt-[100px] mb-[200px] animate-show">
+      <AboutMe />
+      <Illustration />
+      <Skills />
+      <Details />
+      <Hobbies />
+    </div>
   );
 }
 

@@ -14,7 +14,7 @@ export function Header() {
 
   return (
     <>
-      <header className="w-full px-6 pt-6 relative z-20 sm:px-16 sm:pt-9 lg:container lg:mx-auto">
+      <header className="w-full px-6 pt-6 relative z-20 sm:px-16 sm:pt-9 lg:container lg:mx-auto animate-show">
         <div className="w-full flex items-center justify-between gap-12">
           <Link href="/">
             <Image

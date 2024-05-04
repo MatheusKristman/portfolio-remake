@@ -1,17 +1,17 @@
-export const TransitionAnimation = {
+export const pageTransitionAnimation = {
   initial: {
-    y: "-100%",
+    opacity: 0,
   },
   animate: {
-    y: 0,
+    opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 1,
     },
   },
   exit: {
-    y: "100%",
+    opacity: 0,
     transition: {
-      duration: 0.5,
+      duration: 1,
     },
   },
 };
