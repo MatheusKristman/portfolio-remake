@@ -76,6 +76,11 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      backgroundImage: {
+        grainy: "url('/assets/images/noise.png')",
+        "github-light": "url('/assets/icons/github-light.svg')",
+        "github-dark": "url('/assets/icons/github-dark.svg')",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

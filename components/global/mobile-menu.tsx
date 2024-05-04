@@ -27,7 +27,7 @@ export function MobileMenu() {
           exit="exit"
           variants={NavAnimation}
           className={cn(
-            "fixed top-0 left-0 right-0 bottom-0 w-screen h-screen bg-secondary px-6 sm:px-16"
+            "fixed top-0 left-0 right-0 bottom-0 w-screen h-screen bg-secondary px-6 sm:px-16 z-10"
           )}
         >
           <ul className="w-full flex flex-col items-end gap-12 mt-40">

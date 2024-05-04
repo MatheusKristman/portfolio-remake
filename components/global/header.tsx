@@ -1,13 +1,20 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+
 import { ModeToggle } from "@/components/global/mode-toggle";
 import { MobileMenuButton } from "./mobile-menu-button";
 import { MobileMenu } from "./mobile-menu";
+import { cn } from "@/lib/utils";
 
 export function Header() {
+  const pathname = usePathname();
+
   return (
     <>
-      <header className="w-full px-6 pt-6 relative z-20 sm:px-16 sm:pt-9">
+      <header className="w-full px-6 pt-6 relative z-20 sm:px-16 sm:pt-9 lg:container lg:mx-auto">
         <div className="w-full flex items-center justify-between gap-12">
           <Link href="/">
             <Image
@@ -15,7 +22,15 @@ export function Header() {
               alt="Logo MKDev"
               width={80}
               height={33}
-              className="block dark:hidden"
+              className="block lg:hidden dark:hidden"
+            />
+
+            <Image
+              src="/assets/images/logo-light.svg"
+              alt="Logo MKDev"
+              width={110}
+              height={45}
+              className="hidden lg:block lg:dark:hidden"
             />
 
             <Image
@@ -23,7 +38,15 @@ export function Header() {
               alt="Logo MKDev"
               width={80}
               height={33}
-              className="hidden dark:block"
+              className="hidden lg:hidden lg:dark:hidden dark:block"
+            />
+
+            <Image
+              src="/assets/images/logo-dark.svg"
+              alt="Logo MKDev"
+              width={110}
+              height={45}
+              className="hidden lg:hidden lg:dark:block"
             />
           </Link>
 
@@ -37,7 +60,14 @@ export function Header() {
                   Portfólio
                 </Link>
 
-                <div className="h-[2px] bg-secondary absolute bottom-0 w-0 transform right-0 left-auto transition-all group-hover:left-0 group-hover:right-auto group-hover:w-full" />
+                <div
+                  className={cn(
+                    "h-[2px] bg-secondary absolute bottom-0 w-0 transform right-0 left-auto transition-all group-hover:left-0 group-hover:right-auto group-hover:w-full",
+                    {
+                      "w-full": pathname === "/portfolio",
+                    }
+                  )}
+                />
               </li>
 
               <li className="w-fit relative group">
@@ -45,7 +75,14 @@ export function Header() {
                   Sobre
                 </Link>
 
-                <div className="h-[2px] bg-secondary absolute bottom-0 w-0 transform right-0 left-auto transition-all group-hover:left-0 group-hover:right-auto group-hover:w-full" />
+                <div
+                  className={cn(
+                    "h-[2px] bg-secondary absolute bottom-0 w-0 transform right-0 left-auto transition-all group-hover:left-0 group-hover:right-auto group-hover:w-full",
+                    {
+                      "w-full": pathname === "/sobre",
+                    }
+                  )}
+                />
               </li>
 
               <li className="w-fit relative group">
@@ -56,7 +93,14 @@ export function Header() {
                   Contato
                 </Link>
 
-                <div className="h-[2px] bg-secondary absolute bottom-0 w-0 transform right-0 left-auto transition-all group-hover:left-0 group-hover:right-auto group-hover:w-full" />
+                <div
+                  className={cn(
+                    "h-[2px] bg-secondary absolute bottom-0 w-0 transform right-0 left-auto transition-all group-hover:left-0 group-hover:right-auto group-hover:w-full",
+                    {
+                      "w-full": pathname === "/contato",
+                    }
+                  )}
+                />
               </li>
             </ul>
           </nav>
