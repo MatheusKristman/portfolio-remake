@@ -3,16 +3,15 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme();
+
+  useEffect(() => {
+    setTheme("light");
+  }, []);
 
   function toggleTheme() {
     if (theme === "light") {
