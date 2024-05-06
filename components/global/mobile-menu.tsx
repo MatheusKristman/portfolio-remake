@@ -15,8 +15,16 @@ import {
 } from "@/constants/framer-motion/mobile-menu-animation";
 
 export function MobileMenu() {
-  const { isMenuOpen } = useMobileMenuStore();
+  const { isMenuOpen, closeMenu } = useMobileMenuStore();
   const pathname = usePathname();
+
+  function closeOnClick(path: string) {
+    if (pathname === path) {
+      return;
+    }
+
+    closeMenu();
+  }
 
   return (
     <AnimatePresence>
@@ -27,12 +35,13 @@ export function MobileMenu() {
           exit="exit"
           variants={NavAnimation}
           className={cn(
-            "fixed top-0 left-0 right-0 bottom-0 w-screen h-screen bg-secondary px-6 sm:px-16 z-10"
+            "fixed top-0 left-0 right-0 bottom-0 w-screen h-screen bg-secondary px-6 sm:px-16 z-10",
           )}
         >
           <ul className="w-full flex flex-col items-end gap-12 mt-40">
             <li className="flex items-center gap-2">
               <Link
+                onClick={() => closeOnClick("/portfolio")}
                 href="/portfolio"
                 className="text-3xl font-bold text-primary uppercase"
               >
@@ -45,13 +54,14 @@ export function MobileMenu() {
                 exit="exit"
                 variants={Line1Animation}
                 className={cn("h-[1px] bg-primary", {
-                  "w-20": pathname === "/portfolio",
+                  "!w-20 transition-all": pathname === "/portfolio",
                 })}
               />
             </li>
 
             <li className="flex items-center gap-2">
               <Link
+                onClick={() => closeOnClick("/sobre")}
                 href="/sobre"
                 className="text-3xl font-bold text-primary uppercase"
               >
@@ -64,13 +74,14 @@ export function MobileMenu() {
                 exit="exit"
                 variants={Line2Animation}
                 className={cn("h-[1px] bg-primary", {
-                  "w-20": pathname === "/portfolio",
+                  "!w-20 transition-all": pathname === "/sobre",
                 })}
               />
             </li>
 
             <li className="flex items-center gap-2">
               <Link
+                onClick={() => closeOnClick("/contato")}
                 href="/contato"
                 className="text-3xl font-bold text-primary uppercase"
               >
@@ -83,7 +94,7 @@ export function MobileMenu() {
                 exit="exit"
                 variants={Line3Animation}
                 className={cn("h-[1px] bg-primary", {
-                  "w-20": pathname === "/portfolio",
+                  "!w-20 transition-all": pathname === "/contato",
                 })}
               />
             </li>

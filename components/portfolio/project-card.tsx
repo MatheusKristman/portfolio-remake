@@ -93,6 +93,8 @@ export function ProjectCard({
           <Button asChild variant="outline">
             <a
               href={githubLink}
+              target="_blank"
+              rel="noreferrer noopenner"
               className="relative !p-0 w-[35px] sm:w-[45px] h-[35px] sm:h-[45px] flex items-center justify-center bg-github-light dark:bg-github-dark hover:bg-github-dark dark:hover:bg-github-light bg-no-repeat bg-center bg-[length:89%_87%] sm:bg-[length:90%_90%]"
             >
               <span className="sr-only">GitHub Projeto</span>
@@ -104,7 +106,7 @@ export function ProjectCard({
             variant="outline"
             className="w-fit h-[32px] sm:h-[45px] flex items-center gap-1 text-base sm:text-2xl font-light py-2 group"
           >
-            <a href={projectLink}>
+            <a href={projectLink} target="_blank" rel="noreferrer noopenner">
               Ver Projeto
               <ArrowUpRight
                 strokeWidth={1.5}

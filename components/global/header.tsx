@@ -8,9 +8,24 @@ import { ModeToggle } from "@/components/global/mode-toggle";
 import { MobileMenuButton } from "./mobile-menu-button";
 import { MobileMenu } from "./mobile-menu";
 import { cn } from "@/lib/utils";
+import useMobileMenuStore from "@/stores/mobile-menu-store";
+import { useEffect } from "react";
 
 export function Header() {
+  const { isMenuOpen } = useMobileMenuStore();
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      window.document.documentElement.style.overflowY = "hidden";
+    } else {
+      window.document.documentElement.style.overflowY = "auto";
+    }
+
+    return () => {
+      window.document.documentElement.style.overflowY = "auto";
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -65,7 +80,7 @@ export function Header() {
                     "h-[2px] bg-secondary absolute bottom-0 w-0 transform right-0 left-auto transition-all group-hover:left-0 group-hover:right-auto group-hover:w-full",
                     {
                       "w-full": pathname === "/portfolio",
-                    }
+                    },
                   )}
                 />
               </li>
@@ -80,7 +95,7 @@ export function Header() {
                     "h-[2px] bg-secondary absolute bottom-0 w-0 transform right-0 left-auto transition-all group-hover:left-0 group-hover:right-auto group-hover:w-full",
                     {
                       "w-full": pathname === "/sobre",
-                    }
+                    },
                   )}
                 />
               </li>
@@ -98,7 +113,7 @@ export function Header() {
                     "h-[2px] bg-secondary absolute bottom-0 w-0 transform right-0 left-auto transition-all group-hover:left-0 group-hover:right-auto group-hover:w-full",
                     {
                       "w-full": pathname === "/contato",
-                    }
+                    },
                   )}
                 />
               </li>
