@@ -39,7 +39,7 @@ function Card({ title, period, role }: CardProps) {
 
 export function Details() {
   return (
-    <section className="w-full px-6 sm:px-16 pt-[200px] flex flex-col gap-y-24 lg:container lg:mx-auto lg:grid lg:grid-cols-3 lg:gap-x-6">
+    <section className="w-full px-6 sm:px-16 pt-[200px] flex flex-col gap-y-24 lg:container lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-x-12">
       <div className="w-full flex flex-col gap-12">
         <h5 className="text-3xl text-primary font-bold">
           Tecnologias que domino
@@ -53,17 +53,17 @@ export function Details() {
                   <Image
                     src={lightImageUrl}
                     alt={content}
-                    width={30}
-                    height={30}
-                    className="block w-[30px] h-[30px] dark:hidden"
+                    width={50}
+                    height={50}
+                    className="block w-[50px] h-[50px] dark:hidden"
                   />
 
                   <Image
                     src={darkImageUrl}
                     alt={content}
-                    width={30}
-                    height={30}
-                    className="hidden w-[30px] h-[30px] dark:block"
+                    width={50}
+                    height={50}
+                    className="hidden w-[50px] h-[50px] dark:block"
                   />
                 </TooltipTrigger>
 
@@ -75,16 +75,6 @@ export function Details() {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
-          ))}
-        </div>
-      </div>
-
-      <div className="w-full flex flex-col gap-12">
-        <h5 className="text-3xl font-bold text-primary">Experiencias</h5>
-
-        <div className="w-full flex flex-col gap-9">
-          {experiences.map((experience) => (
-            <Card {...experience} key={experience.title} />
           ))}
         </div>
       </div>

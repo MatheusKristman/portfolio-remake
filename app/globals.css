@@ -110,6 +110,11 @@
   }
 }
 
+html,
+body {
+  min-height: 100vh;
+}
+
 @layer base {
   * {
     @apply border-border selection:bg-secondary;

@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/global/header";
 import { Footer } from "@/components/global/footer";
+import { Glows } from "@/components/global/glows";
 
 import "./globals.css";
-import { Glows } from "@/components/global/glows";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased relative",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <div className="w-full min-h-screen bg-grainy relative z-10">

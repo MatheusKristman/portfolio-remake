@@ -122,6 +122,16 @@ export const projectsResumeIllustrationAnimation = {
       ease: "easeInOut",
     },
   },
+  exit: {
+    scale: "var(--scale-initial)",
+    y: "var(--y-initial)",
+    x: "var(--x-initial)",
+    opacity: "var(--opacity-initial)",
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
+  },
 };
 
 export const projectResumeInfosAnimation = {
