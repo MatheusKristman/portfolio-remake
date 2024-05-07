@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/global/header";
 import { Footer } from "@/components/global/footer";
 import { Glows } from "@/components/global/glows";
+import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
 
@@ -43,6 +44,7 @@ export default function RootLayout({
         </div>
 
         <Glows />
+        <Toaster />
       </body>
     </html>
   );

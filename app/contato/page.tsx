@@ -3,6 +3,8 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -35,7 +37,16 @@ function ContactPage() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    axios
+      .post("/api/contact", values)
+      .then((res) => {
+        console.log(res.data);
+
+        toast.success(res.data.message);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   return (

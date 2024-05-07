@@ -90,12 +90,12 @@ export function ProjectCard({
         </div>
 
         <div className="w-fit flex items-center justify-end gap-4">
-          <Button asChild variant="outline">
+          <Button asChild variant="link" size="icon">
             <a
               href={githubLink}
               target="_blank"
               rel="noreferrer noopenner"
-              className="relative !p-0 w-[35px] sm:w-[45px] h-[35px] sm:h-[45px] flex items-center justify-center bg-github-light dark:bg-github-dark hover:bg-github-dark dark:hover:bg-github-light bg-no-repeat bg-center bg-[length:89%_87%] sm:bg-[length:90%_90%]"
+              className="relative !p-0 w-[35px] sm:w-[45px] h-[35px] sm:h-[45px] flex items-center justify-center bg-github-light dark:bg-github-dark transition-opacity hover:opacity-90 bg-no-repeat bg-center bg-[length:89%_87%] sm:bg-[length:90%_90%]"
             >
               <span className="sr-only">GitHub Projeto</span>
             </a>
