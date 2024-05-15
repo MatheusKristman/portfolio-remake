@@ -1,6 +1,7 @@
 export function AboutMe() {
   return (
-    <section className="w-full px-6 sm:px-16 flex flex-col gap-12 items-center lg:container lg:mx-auto mb-[200px]">
+    // mb-[200px]
+    <section className="w-full px-6 sm:px-16 flex flex-col gap-12 items-center lg:container lg:mx-auto">
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-primary">
         Matheus Kristman.
       </h2>

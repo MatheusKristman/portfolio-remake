@@ -8,7 +8,7 @@ function AboutPage() {
   return (
     <div className="w-full mt-[100px] mb-[200px] animate-show">
       <AboutMe />
-      <Illustration />
+      {/* <Illustration /> */}
       <Skills />
       <Details />
       <Hobbies />
