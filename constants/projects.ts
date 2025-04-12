@@ -138,4 +138,35 @@ export const projects = [
     projectDesc:
       "Hanazaki Studio é uma agência especializada na criação de modelos 3D para a indústria da construção civil. Como parte de um esforço para aprimorar sua presença online, desenvolvi um novo site institucional que reflete a expertise e o profissionalismo do estúdio. O novo site oferece uma interface moderna e intuitiva, apresentando os serviços oferecidos pela agência, portfólio de projetos anteriores e informações detalhadas sobre a equipe. Com este projeto, busquei não apenas atualizar a imagem online do Hanazaki Studio, mas também destacar sua excelência na criação de modelos 3D para clientes na indústria da construção civil.",
   },
+  {
+    projectName: "Zuro",
+    techs: [
+      {
+        lightImageUrl: "/assets/icons/nextjs-light.svg",
+        darkImageUrl: "/assets/icons/nextjs-dark.svg",
+        content: "Next.js",
+      },
+      {
+        lightImageUrl: "/assets/icons/typescript-light.svg",
+        darkImageUrl: "/assets/icons/typescript-dark.svg",
+        content: "Typescript",
+      },
+      {
+        lightImageUrl: "/assets/icons/tailwindcss-light.svg",
+        darkImageUrl: "/assets/icons/tailwindcss-dark.svg",
+        content: "TailwindCSS",
+      },
+      {
+        lightImageUrl: "/assets/icons/mongodb-light.svg",
+        darkImageUrl: "/assets/icons/mongodb-dark.svg",
+        content: "MongoDB",
+      },
+    ],
+    service: "Freelancer",
+    githubLink: "https://github.com/matteocaracio/zuro",
+    projectLink: "https://zuro.app/",
+    projectImageUrl: "/assets/images/zuro.png",
+    projectDesc:
+      "Zuro é uma plataforma que facilita o dia a dia de profissionais, permitindo que eles criem um link personalizado para compartilhar com seus clientes. Através desse link, os clientes podem visualizar os horários disponíveis e agendar de forma prática. Além disso, a plataforma conta com integração com o Google Agenda, garantindo mais organização e sincronização automática dos compromissos.",
+  },
 ];
