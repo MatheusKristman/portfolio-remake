@@ -107,37 +107,37 @@ export const projects = [
     projectDesc:
       "O Sapiente é uma plataforma de ensino, criada para facilitar a interação entre professores e alunos. Com recursos de chat integrados, os professores podem ministrar aulas diretamente aos alunos, proporcionando uma experiência de aprendizado personalizada e interativa. Além disso, os alunos têm a facilidade de fazer solicitações dentro do próprio site para encontrar professores qualificados para suas necessidades específicas. Essa plataforma visa promover o acesso à educação de qualidade, conectando professores talentosos com alunos em busca de conhecimento.",
   },
-  {
-    projectName: "Hanazaki Studio",
-    techs: [
-      {
-        lightImageUrl: "/assets/icons/nextjs-light.svg",
-        darkImageUrl: "/assets/icons/nextjs-dark.svg",
-        content: "Next.js",
-      },
-      {
-        lightImageUrl: "/assets/icons/typescript-light.svg",
-        darkImageUrl: "/assets/icons/typescript-dark.svg",
-        content: "Typescript",
-      },
-      {
-        lightImageUrl: "/assets/icons/tailwindcss-light.svg",
-        darkImageUrl: "/assets/icons/tailwindcss-dark.svg",
-        content: "TailwindCSS",
-      },
-      {
-        lightImageUrl: "/assets/icons/figma-light.svg",
-        darkImageUrl: "/assets/icons/figma-dark.svg",
-        content: "Figma",
-      },
-    ],
-    service: "Freelancer",
-    githubLink: "https://github.com/MatheusKristman/hanazaki-studio",
-    projectLink: "https://www.hanazakistudio.com/",
-    projectImageUrl: "/assets/images/hanazaki-studio.png",
-    projectDesc:
-      "Hanazaki Studio é uma agência especializada na criação de modelos 3D para a indústria da construção civil. Como parte de um esforço para aprimorar sua presença online, desenvolvi um novo site institucional que reflete a expertise e o profissionalismo do estúdio. O novo site oferece uma interface moderna e intuitiva, apresentando os serviços oferecidos pela agência, portfólio de projetos anteriores e informações detalhadas sobre a equipe. Com este projeto, busquei não apenas atualizar a imagem online do Hanazaki Studio, mas também destacar sua excelência na criação de modelos 3D para clientes na indústria da construção civil.",
-  },
+  // {
+  //   projectName: "Hanazaki Studio",
+  //   techs: [
+  //     {
+  //       lightImageUrl: "/assets/icons/nextjs-light.svg",
+  //       darkImageUrl: "/assets/icons/nextjs-dark.svg",
+  //       content: "Next.js",
+  //     },
+  //     {
+  //       lightImageUrl: "/assets/icons/typescript-light.svg",
+  //       darkImageUrl: "/assets/icons/typescript-dark.svg",
+  //       content: "Typescript",
+  //     },
+  //     {
+  //       lightImageUrl: "/assets/icons/tailwindcss-light.svg",
+  //       darkImageUrl: "/assets/icons/tailwindcss-dark.svg",
+  //       content: "TailwindCSS",
+  //     },
+  //     {
+  //       lightImageUrl: "/assets/icons/figma-light.svg",
+  //       darkImageUrl: "/assets/icons/figma-dark.svg",
+  //       content: "Figma",
+  //     },
+  //   ],
+  //   service: "Freelancer",
+  //   githubLink: "https://github.com/MatheusKristman/hanazaki-studio",
+  //   projectLink: "https://www.hanazakistudio.com/",
+  //   projectImageUrl: "/assets/images/hanazaki-studio.png",
+  //   projectDesc:
+  //     "Hanazaki Studio é uma agência especializada na criação de modelos 3D para a indústria da construção civil. Como parte de um esforço para aprimorar sua presença online, desenvolvi um novo site institucional que reflete a expertise e o profissionalismo do estúdio. O novo site oferece uma interface moderna e intuitiva, apresentando os serviços oferecidos pela agência, portfólio de projetos anteriores e informações detalhadas sobre a equipe. Com este projeto, busquei não apenas atualizar a imagem online do Hanazaki Studio, mas também destacar sua excelência na criação de modelos 3D para clientes na indústria da construção civil.",
+  // },
   {
     projectName: "Zuro",
     techs: [
